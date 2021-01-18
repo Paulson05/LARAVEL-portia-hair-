@@ -25,6 +25,8 @@ Route::get('/how-to-order', [App\Http\Controllers\PagesController::class, 'order
 Route::get('/product', [App\Http\Controllers\PagesController::class, 'product'])->name('product');
 
 
+Route::get('/create', [App\Http\Controllers\OrderController::class, 'create'])->name('create');
+
 
 Auth::routes();
 
