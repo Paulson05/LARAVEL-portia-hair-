@@ -14,11 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('portiahair.homepage');
+    return view('pages.homepage');
 });
-Route::get('/homepage', function () {
-    return view('portiahair.homepage');
-});
+
+
+Route::get('/homepage', [App\Http\Controllers\PagesController::class, 'index'])->name('index');
+Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->name('about');
+Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
+Route::get('/how-to-order', [App\Http\Controllers\PagesController::class, 'order'])->name('order');
+Route::get('/product', [App\Http\Controllers\PagesController::class, 'product'])->name('product');
+
 
 
 Auth::routes();

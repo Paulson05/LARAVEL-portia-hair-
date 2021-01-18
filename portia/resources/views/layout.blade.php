@@ -24,16 +24,16 @@
                   <a class="nav-link active" aria-current="page" href="/homepage">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
+                  <a class="nav-link" href="/about">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact Us</a>
+                  <a class="nav-link" href="/contact">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">How To Order</a>
+                  <a class="nav-link" href="/how-to-order">How To Order</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Our Product</a>
+                  <a class="nav-link" href="/product">Our Product</a>
                 </li>
               </ul>
             </div>
@@ -49,7 +49,7 @@
       @yield('content')
 
       
-  <div class="card-footer" style="margin-top:150px; !important">
+  <div class="container" style="margin-top:150px; !important">
   <p class="" style="text-align:center; !important" >Copyright 2020 Pizza House</p>
   </div>
 </div>
