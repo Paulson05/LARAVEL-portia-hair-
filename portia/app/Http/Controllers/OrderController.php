@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use DB;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -37,6 +38,16 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         //
+        
+        $data = array();
+        $data['name'] = $request->name;
+        $data['phone_number'] = $request->phone_number;
+        $data['address'] = $request->address;
+        $data['type'] = $request->name;
+        $data['range'] = $request->phone_number;
+        $data['color'] = $request->address;
+        $contact=DB::table('order')->insert($data);
+        return redirect('/');
     }
 
     /**

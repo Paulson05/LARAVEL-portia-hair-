@@ -6,8 +6,12 @@
 <div class="container justify-content-center" style="margin-top:10px !important">
    
    <h2 class="card-title">Contact US</h2>
-<form action="/pages/post" method= "POST">
+<form action="/pages/contact" method= "POST">
 @csrf
+<div class="form-group">
+  <label for="email">Name:</label>
+  <input type="text" class="form-control" placeholder="Enter email" name ="name" id="name" style="width: 450px">
+ </div>
 <div class="form-group">
  <label for="email">Email address:</label>
  <input type="email" class="form-control" placeholder="Enter email" name ="email" id="email" style="width: 450px">

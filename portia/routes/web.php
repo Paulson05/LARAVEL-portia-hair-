@@ -23,7 +23,8 @@ Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->na
 Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
 Route::get('/how-to-order', [App\Http\Controllers\PagesController::class, 'order'])->name('order');
 Route::get('/product', [App\Http\Controllers\PagesController::class, 'product'])->name('product');
-
+Route::post('/pages/order', [App\Http\Controllers\OrderController::class, 'store'])->name('store');
+Route::post('/pages/contact', [App\Http\Controllers\PagesController::class, 'store'])->name('store');
 
 Route::get('/create', [App\Http\Controllers\OrderController::class, 'create'])->name('create');
 

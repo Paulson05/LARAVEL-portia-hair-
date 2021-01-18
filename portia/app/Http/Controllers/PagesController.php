@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class PagesController extends Controller
 {
     //
@@ -27,6 +27,20 @@ class PagesController extends Controller
       public function product() {
        
         return view('pages.product');
+      }
+
+      public function store(Request $request)
+      {
+          //
+          
+          $data = array();
+          $data['name'] = $request->name;
+          $data['email'] = $request->email;
+          $data['password'] = $request->password;
+          $data['comment'] = $request->comment;
+          
+          $contact=DB::table('contact')->insert($data);
+          return redirect('/');
       }
       
 }

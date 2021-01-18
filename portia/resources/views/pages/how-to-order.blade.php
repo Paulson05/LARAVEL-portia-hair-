@@ -10,11 +10,6 @@
  
                         　
                     </p>
-
-                   
-
-                   
-                   
                     
                         
                         <ul style="list-style: none">
@@ -26,7 +21,7 @@
                         </ul>
     
                         <span>
-                            <a href="/pages/contact" class="btn btn-primary"style="margin-left:5px !important">Order Now</a>
+                            <a href="/create" class="btn btn-primary"style="margin-left:5px !important">Order Now</a>
                         </span>
                        
    
