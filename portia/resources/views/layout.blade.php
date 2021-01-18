@@ -38,9 +38,13 @@
               </ul>
             </div>
             <span class="navbar-text">
-             
-             <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+             <a href="/pages/contact" class="btn btn-primary" >Register</a>
             </span>
+            <span>
+              <a href="/pages/contact" class="btn btn-secondary"style="margin-left:5px !important">login</a>
+            </span>
+    
+   
           </div>
         </div>
       </nav>
