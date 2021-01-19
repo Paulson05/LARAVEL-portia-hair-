@@ -43,9 +43,9 @@ class OrderController extends Controller
         $data['name'] = $request->name;
         $data['phone_number'] = $request->phone_number;
         $data['address'] = $request->address;
-        $data['type'] = $request->name;
-        $data['range'] = $request->phone_number;
-        $data['color'] = $request->address;
+        $data['type'] = $request->type;
+        $data['range'] = $request->range;
+        $data['color'] = $request->color;
         $contact=DB::table('order')->insert($data);
         return redirect('/');
        
@@ -67,7 +67,14 @@ class OrderController extends Controller
         ]);
     
     }
+    public function items(Order $id)
+    {
+        //
 
+        return view('order.items')->with([
+            'item'=>$id,
+            ]);
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -100,5 +107,12 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+        
+            // $order=Order::delete();
+            // return redirect('/pages/contact/store')->with([
+            //     'order'=>$order,
+            // ]);
+            $order->delete();
+            return redirect()->route('show');
     }
 }

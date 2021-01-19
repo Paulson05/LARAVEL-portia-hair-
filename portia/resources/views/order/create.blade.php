@@ -43,7 +43,7 @@
   </div>
   <div class="form-group">
    <label for="pwd">Color:</label><br>
-   <select name="color" id="color" style="width: 60%">
+   <select name="color" id="color"  style="width: 60%">
     <option value="bone straight">Black</option>
     <option value="bone straight">Gold</option>
     <option value="bone straight">Pink</option>

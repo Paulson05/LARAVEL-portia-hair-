@@ -1,4 +1,4 @@
-@extends('layouts.app')
+  @extends('layouts.app')
 
 @section('content')
 <div class="wrapper pizza-details">
@@ -6,12 +6,12 @@
 
     <h2 class="card-title" style="" >Order list</h2>
   
-    @foreach ($orders as $order)
+    @foreach ($contacts as $contact)
      
   
         <p></p>
         <ul class="list-group">
-        <button type="button" class="btn btn-success"> Order from <a href="{{route('items',['id'=>$order->id])}}">{{$order->name}}</button>
+        <button type="button" class="btn btn-success"> Order from <a href="{{route('contactitems',['id'=>$contact->id])}}">{{$contact->name}}</button>
            
           
          

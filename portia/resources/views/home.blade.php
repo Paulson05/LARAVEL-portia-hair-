@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <a href="/order/show">Orders</a><br>
+                    <a href="{{route('showcontact')}}">Contact</a>
+
                 </div>
             </div>
         </div>
