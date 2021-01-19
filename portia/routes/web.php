@@ -31,7 +31,7 @@ Route::get('/create', [App\Http\Controllers\OrderController::class, 'create'])->
 
 Auth::routes();
 
-Route::get('/login', [App\Http\Controllers\AuthController::class, 'login'])->name('login');
+// Route::get('/login', [App\Http\Controllers\AuthController::class, 'login'])->name('login');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 

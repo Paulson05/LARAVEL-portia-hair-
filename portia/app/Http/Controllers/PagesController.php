@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Log;
 class PagesController extends Controller
 {
     //
@@ -32,7 +33,7 @@ class PagesController extends Controller
       public function store(Request $request)
       {
           //
-          
+          Log::error('uuuu');
           $data = array();
           $data['name'] = $request->name;
           $data['email'] = $request->email;
