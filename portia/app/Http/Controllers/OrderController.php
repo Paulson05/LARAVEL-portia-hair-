@@ -48,6 +48,7 @@ class OrderController extends Controller
         $data['color'] = $request->address;
         $contact=DB::table('order')->insert($data);
         return redirect('/');
+       
     }
 
     /**
@@ -56,9 +57,15 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show(Request $request)
     {
         //
+    
+        $order=Order::all();
+        return view('order.show')->with([
+            'orders'=>$order,
+        ]);
+    
     }
 
     /**
