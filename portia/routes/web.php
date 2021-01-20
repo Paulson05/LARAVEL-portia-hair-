@@ -18,19 +18,19 @@ Route::get('/', function () {
 });
 
 
-Route::get('/homepage', [App\Http\Controllers\PagesController::class, 'index'])->name('index');
-Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->name('about');
+Route::get('/homepage', [App\Http\Controllers\PagesController::class, 'index'])->name('index')->middleware('auth');
+Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->name('about')->middleware('auth');
 Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
 Route::get('/how-to-order', [App\Http\Controllers\PagesController::class, 'order'])->name('order');
-Route::get('/product', [App\Http\Controllers\PagesController::class, 'product'])->name('product');
-Route::post('/pages/contact', [App\Http\Controllers\PagesController::class, 'store'])->name('store');
+Route::get('/product', [App\Http\Controllers\PagesController::class, 'product'])->name('product')->middleware('auth');
+Route::post('/pages/contact', [App\Http\Controllers\PagesController::class, 'store'])->name('store')->middleware('auth');
 
 
-Route::get('/order/items/{id}', [App\Http\Controllers\OrderController::class, 'items'])->name('items');
-Route::get('/order/show', [App\Http\Controllers\OrderController::class, 'show'])->name('show');
-Route::post('/pages/order', [App\Http\Controllers\OrderController::class, 'store'])->name('store');
+Route::get('/order/items/{id}', [App\Http\Controllers\OrderController::class, 'items'])->name('items')->middleware('auth');
+Route::get('/order/show', [App\Http\Controllers\OrderController::class, 'show'])->name('show')->middleware('auth');
+Route::post('/pages/order', [App\Http\Controllers\OrderController::class, 'store'])->name('store')->middleware('auth');
 Route::get('/create', [App\Http\Controllers\OrderController::class, 'create'])->name('create');
-Route::delete('/order/items/{order}', [App\Http\Controllers\OrderController::class, 'destroy'])->name('destroy');
+Route::delete('/order/items/{order}', [App\Http\Controllers\OrderController::class, 'destroy'])->name('destroy')->middleware('auth');
 
 
 
